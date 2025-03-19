@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This is the form to book an appointment at the Swinburne Help Desk">
+    <meta name="keywords" content="Student Details, Unit, Issues, Date, Time, Reset, Book">
+    <meta name="author" content="Swinburne University of Technology">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CWA Help Desk Appointment</title>
+</head>
+<body>
+    <p><a href="http://www.swin.edu.au">
+        <img src="logo.png" alt="Swinburne University of Technology">
+        </a></p>
+        <p></p>
+    
+    <h1>CWA Help Desk Appointment</h1>
+    <p> The Help Desk is located in ATC620. Open 10:30 to 19:00 Monday to Friday</p>
+    <p></p>
+    <p> Check Blackboard for when CWA tutors will be there</p>
+    
+
+<form method=post action="http://mercury.swin.edu.au/it000000/formtest.php">    
+<fieldset>
+    <legend>Student Details</legend>  
+        <label for="StudentID">Student ID</label> 
+            <input type="text" name= "StudentID" id="StudentID" required="required" minlength="7" maxlength="10"/>
+        <p></p>
+        <label for="GivenName">Given Name</label>
+            <input type="text" name= "GivenName" id="GivenName" required="required" maxlength="15" pattern="[a-zA-Z]+"/>
+        <label for="FamilyName">Family Name</label>
+            <input type="text" name= "FamilyName" id="FamilyName" required="required" maxlength="15" pattern="[a-zA-Z]+"/>
+</fieldset>
+
+<fieldset>
+    <legend>Your Unit</legend>
+    <label for="Unit1">COS10011</label>
+        <input type="radio" name="Units" id="Unit1" value="COS10011" required="required">
+    <label for="Unit2">COS60004</label>
+        <input type="radio" name="Units" id="Unit2" value="COS60004" required="required">
+    <label for="Unit3">COS60007</label>
+        <input type="radio" name="Units" id="Unit3" value="COS60007" required="required">
+     
+<p></p>
+    <label for="TutorName">Your Tutor</label>
+        <select name="TutorName" id="TutorName" required="required">
+            <option value="">Please Select</option>
+            <option value="SamSmith">Sam Smith</option>			
+			<option value="TaylorSwift">Taylor Swift</option>
+			<option value="JosephSmith">Joseph Smith</option>
+			<option value="SteveSmith">Steve Smith</option>
+			<option value="other">Other</option>
+            </select>
+</fieldset>  
+
+<fieldset>  
+    <legend>Your Issue</legend>
+    <label for="HTML">HTML</label> 
+        <input type="checkbox" id="HTML" name="issue" value="HTML" checked="checked"/>
+    <label for="CSS">CSS</label> 
+        <input type="checkbox" id="CSS" name="issue" value="CSS"/>
+    <label for="Javascript">Javascript</label> 
+        <input type="checkbox" id="Javascript" name="issue" value="Javascript"/>
+    <label for="PHP">PHP</label> 
+        <input type="checkbox" id="PHP" name="issue" value="PHP"/>
+    <label for="MySQL">MySQL</label> 
+        <input type="checkbox" id="MySQL" name="issue" value="MySQL"/>
+    <p></p>
+    
+    <label for="Description">Description of Issue</label>
+    <p></p>
+    <textarea id="comments" name="comments" rows="4" cols="40" placeholder="Write description of your problem here..."></textarea>
+</fieldset>
+
+<fieldset>
+    <legend>Preferred Date/Time</legend>
+    <label for="Date">Date</label>
+    <input type="text" name= "Date" id="Date" placeholder="dd-mm-yyyy" pattern="\{d2}-\{d2}-\{d4}">
+    <p></p>
+    <label for="Time">Time</label>
+    <input type="text" name= "Time" id="Time" placeholder="00:00" pattern="\{d2}:\{d2}">
+</fieldset>
+
+    <input type= "submit" value="Book"/>
+	<input type= "reset" value="Reset Form"/>
+        </form>
+</body>
